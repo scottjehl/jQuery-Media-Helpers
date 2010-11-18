@@ -2,8 +2,6 @@ jQuery Media Helper Utilities from jQuery Mobile:
 ==
 resolution and CSS media query related helpers and behavior
 
-Copyright (c) Scott Jehl, Filament Group, Inc
-
 Dual licensed under the MIT (MIT-LICENSE.txt) and GPL (GPL-LICENSE.txt) licenses.
 
 
