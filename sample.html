@@ -1,0 +1,100 @@
+<!DOCTYPE html> 
+<html> 
+	<head>
+	<meta charset="utf-8" /> 
+	<title>jQuery Media Helpers</title> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+	<script src="jquery.mediahelpers.js"></script>
+
+	<style>		
+	/* hide LIs */	
+		li { display: none; }
+	/* show LIs based on present breakpoints */
+		.min-width-320px .min320,
+		.max-width-320px .max320,
+		.min-width-480px .min480,
+		.max-width-480px .max480,
+		.min-width-768px .min768,
+		.max-width-768px .max768,
+		.min-width-1024px .min1024,
+		.max-width-1024px .max1024,
+		.min-width-1200px .min1200,
+		.max-width-1200px .max1200,
+		.min-width-1400px .min1400,
+		.max-width-1400px .max1400,
+		
+		.portrait .port,
+		.landscape .land { display: block; }
+		
+	/* demo formatting */
+		body { font-family: "Trebuchet MS", sans-serif; text-align: center; margin: 0 auto; background: #333; color: #fff; text-shadow: 1px 1px 0 #222; }
+		h2 { border-bottom: 1px solid #444; padding: .5em 1em .2em; }
+		.copy { font-size: .8em;  border-top: 1px solid #111; padding: .5em; margin-top: 4em; }
+		.note { font-size: .9em; margin: 1em 0 3em; font-style: italic;  }
+		ul { padding: 0; }
+		li { list-style: none; padding: .5em 0; }	
+		a { color: orange; }
+		.subh { font-size: .7em; font-weight: normal; display: block; }
+		input { display: inline-block; width: 300px;  font-size: .8em; padding: .5em; color: #fff; background: #000; border: 1px solid #222; -moz-border-radius: .5em; -webkit-border-radius: .5em; border-radius: .5em; }
+		#mhtest { color: #444; display: inline-block; text-decoration: none; text-shadow: none; padding: .5em 1em; border: 1px solid #ccc; background: #eee;  font-size: .8em; font-weight: bold;  -moz-border-radius: 1.5em; -webkit-border-radius: 1.5em; border-radius: 1.5em; }		
+		#mhresult { color: yellow; }
+	</style>
+	
+		
+	<script>
+		//add a breakpoint
+		$.mh.addResolutionBreakpoints( [1200, 1400] );
+		
+		//make a button that runs a sample media query 
+		$(function(){
+			$('#mhtest')
+				.click(function(){
+					$('#mhresult').text( $.mh.media( $('#mq').val() ) );
+					return false;
+				});
+		});	
+	</script>
+	
+</head> 
+<body> 
+
+	<h1>jQuery Media Helper Utilities</h1>
+	<p>jQuery utilities for cross-browser <a href="http://alistapart.com/articles/responsive-web-design/">responsive design</a>, testing CSS media queries, cross-browser orientationchange event support, and more.</p>
+	
+	<p class="note">All code is pulled from <a href="http://jquerymobile.com">jQuery Mobile</a> source. Check out the <a href="README">README</a> or the <a href="jquery.mediahelpers.js">source code</a> for examples.</p>
+	
+	<h2>Active Width Breakpoints:</h2>
+	<ul>
+		<li class="min320">min-width-320px</li>
+		<li class="max320">max-width-320px</li>
+		<li class="min480">min-width-480px</li>
+		<li class="max480">max-width-480px</li>
+		<li class="min768">min-width-768px</li>
+		<li class="max768">max-width-768px</li>
+		<li class="min1024">min-width-1024px</li>
+		<li class="max1024">max-width-1024px</li>
+		<li class="min1200">min-width-1200px</li>
+		<li class="max1200">max-width-1200px</li>
+		<li class="min1400">min-width-1400px</li>
+		<li class="max1400">max-width-1400px</li>
+	</ul>
+	
+	<h2>Active Orientation:</h2>
+	<ul>
+		<li class="port">portrait</li>
+		<li class="land">landscape</li>
+	</ul>
+
+	
+	<div id="mediademo">
+		<h2>Media Type &amp; Query Function <em class="subh">(Runs an actual media query)</em></h2>
+		<input type="text" id="mq" value="screen and (min-width: 480px)">
+		<a href="#" id="mhtest">Test type/query</a>
+		<p id="mhresult"></p>
+	</div>
+	
+
+
+	<p class="copy">Scripts compiled from jQuery Mobile by Scott Jehl, <a href="http://filamentgroup.com">Filament Group, Inc</a></p>
+
+</body>
