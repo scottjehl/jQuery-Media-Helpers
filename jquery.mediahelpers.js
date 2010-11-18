@@ -87,7 +87,7 @@ $.event.special.orientationchange = special_event = {
 	setup: function(){
 		// If the event is supported natively, return false so that jQuery
 		// will bind to the event using DOM methods.
-		if ( $.support.orientation ) { return false; }
+		if ( "orientation" in window ) { return false; }
 		
 		// Get the current orientation to avoid initial double-triggering.
 		last_orientation = get_orientation();
