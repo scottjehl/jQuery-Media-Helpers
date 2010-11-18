@@ -4,6 +4,10 @@ resolution and CSS media query related helpers and behavior
 
 Dual licensed under the MIT (MIT-LICENSE.txt) and GPL (GPL-LICENSE.txt) licenses.
 
+Demo page:
+==
+http://filamentgroup.com/examples/jquery-media-helpers/sample.html
+
 
 Exposed utilities:
 =====
