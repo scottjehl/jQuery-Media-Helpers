@@ -6,7 +6,7 @@ Dual licensed under the MIT (MIT-LICENSE.txt) and GPL (GPL-LICENSE.txt) licenses
 
 Demo page:
 ==
-http://filamentgroup.com/examples/jquery-media-helpers/sample.html
+<a href="http://filamentgroup.com/examples/jquery-media-helpers/sample.html">http://filamentgroup.com/examples/jquery-media-helpers/sample.html</a>
 
 
 Exposed utilities:
