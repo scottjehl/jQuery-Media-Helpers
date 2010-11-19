@@ -157,12 +157,12 @@ function detectResolutionBreakpoints(){
 	$html.removeClass( minPrefix + resolutionBreakpoints.join(unit + " " + minPrefix) + unit + " " + 
 		maxPrefix + resolutionBreakpoints.join( unit + " " + maxPrefix) + unit );
 				
-	$.each(resolutionBreakpoints,function( i ){
-		if( currWidth >= resolutionBreakpoints[ i ] ){
-			minBreakpoints.push( minPrefix + resolutionBreakpoints[ i ] + unit );
+	$.each(resolutionBreakpoints,function( i, breakPoint ){
+		if( currWidth >= breakPoint ){
+			minBreakpoints.push( minPrefix + breakPoint + unit );
 		}
-		if( currWidth <= resolutionBreakpoints[ i ] ){
-			maxBreakpoints.push( maxPrefix + resolutionBreakpoints[ i ] + unit );
+		if( currWidth <= breakPoint ){
+			maxBreakpoints.push( maxPrefix + breakPoint + unit );
 		}
 	});
 	
